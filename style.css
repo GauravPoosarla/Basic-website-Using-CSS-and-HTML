@@ -1,0 +1,265 @@
+/*#####Defaults#####*/
+nav,header,footer{
+    display: block;
+}
+body{
+    line-height: 1;
+    margin: 0;
+}
+label{
+    font-size: 35px;
+    font-weight: bold;
+}
+article p{
+    font-size: 35px;
+    padding: 20px;
+    line-height: 1.2;
+}
+.container{
+    margin:auto;
+    width:100%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+.row{
+    width:100%;
+    display:flex;               /*expand as screen-size*/
+    flex-wrap: wrap;
+    align-items: center;
+}
+.row::after{
+    display:table;
+    clear: both;
+    content: "";
+}
+.col-1{width:8.33%;}
+.col-2{width:16.66%;}
+.col-3{width:25%;}
+.col-4{width:33.33%;}
+.col-5{width:41.66%;}
+.col-6{width:50%;}
+.col-7{width:58.33%;}
+.col-8{width:66.66%;}
+.col-9{width:75%;}
+.col-10{width:83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width:100%;}
+*{
+    box-sizing: border-box;
+}
+
+h1.large{
+    color:white;
+    font-size: 56px;
+    margin: 0;
+    line-height: 70px;
+}
+input[type="text"]{             /*Attribute type selector,like parameter*/
+    font-size: 20px;
+    width:400px;
+    min-width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+}
+form h2{
+    color:white;
+}
+.left-side{
+    margin-left: 30%;
+}
+.right-side{
+    margin-left: 20%;
+}
+.section-2 h1{
+    font-size: 65px;
+    text-align: center;
+}
+.box{
+    background-color: #ffffff;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15),
+    0 2px 3px 0 rgba(0,0,0,0.1);
+    text-align: center;
+    margin:24px; 
+    padding-top: 48px;
+    padding-right: 24px;
+    padding-bottom: 36px;
+    padding-left: 24px;
+    border-radius: 7px;
+}
+.box p{
+    font-size: 25px;
+    line-height: 1.2;
+}
+.icon{
+    width:100%;
+}
+button{
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    background-color: #0069ff;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    margin: 5px;
+    border-radius: 7px;        
+}
+button.learn{
+    display: block;
+    margin: auto;
+}
+#section-1-gradient{
+    background-image:linear-gradient(#0000ff,#ccccff);
+}
+.imagevit img{
+    display: block;
+    margin: auto;
+    box-shadow: -5px -5px 0 0 rgba(0, 0, 0, 0.2);
+
+}
+
+/* #####NavBar##### */
+nav{
+   width:100%;
+   margin:0; 
+}
+nav ul{
+    background-color: #eeeeee;
+    overflow:hidden;
+    margin:0;
+    padding:0;
+}
+ul.topnav li{
+    list-style: none;
+    float: left;
+}
+ul.topnav li.topnav-right{
+    float:right;
+}
+ul.topnav li a{
+    display: block;
+    text-decoration: none;
+    font-size:16px;             /*Also can be represented as min-height:16px*/
+    text-align: center;
+    padding: 14px;
+    text-transform: uppercase;
+    color:#666666;
+    border-radius: 20px;
+}
+ul.topnav li a:hover{
+    background-color: #080fff;
+    color:#ffffff;
+}
+ul.topnav li.dropdownIcon{
+    display:none;
+}
+footer.footsy{
+    background-color: #666666;
+    padding-top: 3.5%;
+    padding-left: 6.5%;
+
+}
+footer.footsy h1{
+    color:white;
+    font-size: 35px;
+}
+footer.footsy ul{
+    list-style: none;
+    text-align: left;
+    padding: 0;         /*after removing the bullet points some space is created*/
+}
+footer.footsy ul li{
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+/* #########Mobile######### */
+@media screen and (max-width: 700px){                   /*media query*/
+    ul.topnav li:not(:nth-child(1)){
+        display:none;
+    }
+    ul.topnav li.dropdownIcon{
+        display:block;
+        float: right;
+    }
+    ul.topnav.responsive li.dropdownIcon{
+        position: absolute;
+        top:0;
+        right:0;
+    }
+    ul.topnav.responsive{
+        position: relative;
+    }
+    ul.topnav.responsive li{
+        display:inline;
+        float: none;
+    }
+    ul.topnav.responsive li a{
+        display:block;                      /*display and position can be easily overidden*/
+        text-align: left;
+    }
+    .col-6{
+        width: 100%;
+        margin:0;
+    }
+    .col-4{
+        width: 100%;
+        margin:0;
+    }
+    .col-7{
+        width: 100%;
+        margin:0;
+    }
+    .col-5{
+        width: 100%;
+        margin:0;
+    }
+    .col-3{
+        width: 50%;
+        margin:0;
+    }
+    .right-side{
+        width:330px;
+        margin-top: 20px;
+        margin-left: 20%;
+    }
+    .left-side{
+        margin-top: 20px;
+        margin-left: 20%;
+    }
+    input[type="text"]{
+        width: 300px;
+    }
+    .video iframe{
+        position: relative;     /*to keep it same position not move*/
+        width:100%;
+        margin:0;
+        overflow: hidden;
+    }
+    .box{
+        display: block;
+        padding:5px;
+    }
+    .section-2 h1{
+        font-size: 35px;
+    }
+    article p{
+        font-size: 20px;
+    }
+    .box p{
+        font-size: 20px;
+    }
+    .imagevit{
+        margin:10px;
+    }
+    .imagevit img{
+        position: relative;
+        width: 100%;
+        margin:0;
+        overflow: hidden;
+    }
+    /* .mobile{                 (Spaced beside col-3 and typed div.mobile and it worked, said for large projects when we have multiple col-3)
+        width:50%;
+        margin:0;
+     } */
+}
