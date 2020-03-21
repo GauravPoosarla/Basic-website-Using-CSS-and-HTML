@@ -67,6 +67,9 @@ form h2{
 .submit button{
     margin-top: 5%;
     margin-left: 40%;
+    padding: 8px;
+    color: white;
+    background-color: chocolate;
 }
 .left-side{
     margin-left: 30%;
